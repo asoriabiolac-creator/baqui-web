@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { initAOS } from './components/Aos-config'
+import Home from './pages/Home'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Contactanos from  './pages/Contactanos'
+import Nosotros from './pages/Nosotros'
+import Productos from './pages/Productos'
+import Promociones from './pages/Promociones'
+import Libro from './pages/Libro'
 
-function App() {
+export default function App() {
+  useEffect(() => {
+    initAOS()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <>
+      
+      <BrowserRouter>
+      <Header/>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contactanos' element={<Contactanos/>}/>
+          <Route path='/nosotros' element={<Nosotros/>}/>
+          <Route path='/productos' element={<Productos/>}/>
+          <Route path='/promociones' element={<Promociones/>}/>
+          <Route path='/libro' element={<Libro/>}/>
+        </Routes>
+        <Footer />
 
-export default App;
+      </BrowserRouter>
+      
+    </>
+  )
+}
