@@ -15,7 +15,6 @@ function ScrollToTop() {
   }, []); // Se ejecuta solo una vez al montar el componente
 
   return null; // Este componente no renderiza nadaa
-  a
 }
 
 export default ScrollToTop;
