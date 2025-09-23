@@ -5,7 +5,7 @@ function Productos() {
   return (
     <main>
       <section className="productos-section">
-        <h1>NUESTROS PRODUCTOS</h1>
+        <h1>NUESTROS PRODUCTOS.</h1>
         <div className="productos-grid">
           <div className="producto">
             <img src="/imagen/KEFIR.png" alt="KEFIR" />
@@ -14,7 +14,7 @@ function Productos() {
               <br />
               <strong>S/15</strong>
             </p>
-          </div>a
+          </div>
 
           <div className="producto">
             <img src="/imagen/arandano.png" alt="YOGUR DE FRESA" />
