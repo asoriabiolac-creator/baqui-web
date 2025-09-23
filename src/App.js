@@ -4,6 +4,7 @@ import { initAOS } from './components/Aos-config'
 import Home from './pages/Home'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import Contactanos from  './pages/Contactanos'
 import Nosotros from './pages/Nosotros'
 import Productos from './pages/Productos'
@@ -19,6 +20,7 @@ export default function App() {
     <>
       
       <BrowserRouter>
+      <ScrollToTop />
       <Header/>
         <Routes>
           <Route path='/' element={<Home />} />
