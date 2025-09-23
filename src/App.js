@@ -21,6 +21,7 @@ export default function App() {
       
       <BrowserRouter>
       <ScrollToTop />
+      
       <Header/>
         <Routes>
           <Route path='/' element={<Home />} />
