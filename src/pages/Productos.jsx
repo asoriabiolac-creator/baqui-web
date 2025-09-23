@@ -14,7 +14,7 @@ function Productos() {
               <br />
               <strong>S/15</strong>
             </p>
-          </div>
+          </div>a
 
           <div className="producto">
             <img src="/imagen/arandano.png" alt="YOGUR DE FRESA" />
