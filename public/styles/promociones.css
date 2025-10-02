@@ -1,16 +1,3 @@
-html, body {
-    min-height: 100vh;
-}
-
-body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    margin: 0;
-    background: #f8f8f8;
-    color: #222;
-    display: flex;
-    flex-direction: column;
-}
-
 main {
     flex-grow: 1;
     background-image: url("../imagen/XD3.png");
@@ -20,63 +7,182 @@ main {
     background-attachment: fixed;
 }
 
-.a {
-    width: 100%;
+/* ASIDE CATEGORÍAS */
+.aside-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.13);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.aside-title {
+    color: #e53935 !important;
+    font-weight: bold;
+    font-size: 1.6em !important;
+}
+.category-link {
+    color: #222 !important;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-size: 1.08em;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 4rem 0;
-    background: transparent;
-    min-height: 50vh; /* Asegura que la sección .a ocupe al menos la mitad de la altura del viewport */
+    padding: 8px 0;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+.category-link:hover {
+    background: #f0f0f0;
+    color: #d32f2f !important;
 }
 
-.al {
-    width: 100%;
+/* TARJETAS DE PROMOCIONES */
+#promociones-productos .custom-card {
+    background: #fff;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
-
-.imagen-fondo {
-    max-width: 50%;
-    height: auto;
-    border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+#promociones-productos .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
-.fondo-promociones-img {
-    max-width: 100%;
-    height: auto;
-    display: block; /* Para centrar con margin: auto */
-    margin: 0 auto;
-    padding: 15px; /* Un poco de padding para que no se pegue a los bordes */
-    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño total */
+#promociones-productos .custom-card-img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    height: 200px;
+    margin-bottom: 10px;
+}
+#promociones-productos .card-body {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+#promociones-productos .card-title {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#promociones-productos .card-text.text-muted {
+    font-size: 1.15em;
+}
+#promociones-productos .card-text.price {
+    font-size: 1.3em;
+    color: #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+#promociones-productos .card-text.price span {
+    font-size: 0.95em;
+}
+#promociones-productos .add-to-cart {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    margin-top: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: inline-block;
+}
+#promociones-productos .add-to-cart:hover {
+    background-color: #333;
+    border-color: #333;
+}
+/* Layout del grid de tarjetas */
+#promociones-productos .row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+#promociones-productos .col-12,
+#promociones-productos .col-sm-6,
+#promociones-productos .col-md-6,
+#promociones-productos .col-lg-4 {
+    flex: 1 1 260px;
+    max-width: 290px;
+    min-width: 200px;
 }
 
+/* Responsive para tarjetas y aside */
 @media (max-width: 900px) {
-    main, .main {
-        padding: 32em 6px;
+    #promociones-productos .row.g-4 {
+        gap: 16px;
     }
-    .a {
-        padding: 2rem 0;
+    .aside-card {
+        margin-bottom: 18px;
     }
 }
-
 @media (max-width: 600px) {
-    .a {
-        padding: 1rem 0;
-        min-height: 30vh;
+    #promociones-productos .col-12,
+    #promociones-productos .col-sm-6,
+    #promociones-productos .col-md-6,
+    #promociones-productos .col-lg-4 {
+        max-width: 100%;
+        flex: 1 1 100%;
     }
-    .fondo-promociones-img {
-        padding: 1px;
+    .aside-card {
+        margin-bottom: 24px;
     }
 }
 
-@media (max-width: 400px) {
-    .a {
-        padding: 0.5rem 0;
-        min-height: 25vh;
-    }
-    .fondo-promociones-img {
-        padding: 1px;
+/* WAVES */
+.custom-wave-2 {
+    position: relative;
+    height: 30px;
+    background-color: transparent;
+    overflow: hidden;
+    margin-bottom: -5px;
+}
+.wave-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    background: radial-gradient(circle at 50% 100%, #000 60%, transparent 60%) repeat-x;
+    background-size: 34px 45px;
+    animation: waveScrollUp 4s linear infinite;
+    opacity: 1;
+    z-index: 0;
+}
+.wave-2.second {
+    animation: waveScrollUp 12s linear infinite reverse;
+    opacity: 0.5;
+    z-index: -1;
+}
+@keyframes waveScrollUp {
+    from { background-position: 0 100%; }
+    to { background-position: 50px 100%; }
+}
+
+.aside-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.13);
+    padding: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    /* NO max-width aquí */
+}
+
+@media (min-width: 1200px) {
+    .aside-card {
+        max-width: 350px;
     }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -62,7 +63,7 @@ function Home() {
         </div>
 
         <div className="ver-mas-container">
-          <a href="/productos.html" className="ver-mas-btn">Ver todos los productos</a>
+          <Link to="/productos" className="ver-mas-btn">Ver todos los productos</Link>
         </div>
       </section>
 
