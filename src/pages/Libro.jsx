@@ -61,7 +61,7 @@ function Libro() {
 
   return (
     <main>
-      <section className="libro-reclamaciones">
+      <section className="libro-reclamaciones    ">
         <h2>Libro de Reclamaciones</h2>
         <div className="libro-info">
           <p>

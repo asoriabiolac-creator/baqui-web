@@ -37,6 +37,27 @@ main {
     color: #d32f2f !important;
 }
 
+.productos-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    font-family: 'Libre Baskerville', serif;
+    color: #222;
+    position: relative;
+    display: inline-block;
+}
+
+.productos-section-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: black;
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+}
+
+/* Estilos generales para la sección de promociones */
 /* TARJETAS DE PROMOCIONES */
 #promociones-productos .custom-card {
     background: #fff;

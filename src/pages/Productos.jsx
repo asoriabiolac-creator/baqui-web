@@ -8,7 +8,7 @@ function Productos() {
       <section className="productos-section">
         <h1>NUESTROS PRODUCTOS.</h1>
         <div className="productos-grid">
-          <div className="producto">
+          <div className="producto" data-aos="fade-up">
             <img src="/imagen/KEFIR.png" alt="KEFIR" />
             <p>
               KEFIR
@@ -17,7 +17,7 @@ function Productos() {
             </p>
           </div>
 
-          <div className="producto">
+          <div className="producto" data-aos="fade-up">
             <img src="/imagen/arandano.png" alt="YOGUR DE FRESA" />
             <p>
               YOGUR DE
@@ -28,8 +28,8 @@ function Productos() {
             </p>
           </div>
 
-          <div className="producto">
-            <img src="/imagen/frutosrojos.png" alt="YOGUR DE FRUTOS ROJOS" />
+          <div className="producto" data-aos="fade-up">
+            <img src="/imagen/frutosrojos2.png" alt="YOGUR DE FRUTOS ROJOS" />
             <p>
               YOGUR DE
               <br />
@@ -39,7 +39,7 @@ function Productos() {
             </p>
           </div>
 
-          <div className="producto">
+          <div className="producto" data-aos="fade-up">
             <img src="/imagen/arandano.png" alt="YOGUR DE ARÁNDANO" />
             <p>
               YOGUR DE
@@ -50,7 +50,7 @@ function Productos() {
             </p>
           </div>
 
-          <div className="producto">
+          <div className="producto" data-aos="fade-up">
             <img src="/imagen/queso.jpeg" alt="QUESO CREMA DE KEFIR" />
             <p>
               QUESO CREMA
@@ -61,7 +61,7 @@ function Productos() {
             </p>
           </div>
 
-          <div className="producto">
+          <div className="producto" data-aos="fade-up">
             <img src="/imagen/mantequilla.jpeg" alt="MANTEQUILLA DE KEFIR" />
             <p>
               MANTEQUILLA

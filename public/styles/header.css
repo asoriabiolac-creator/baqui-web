@@ -11,42 +11,56 @@ header {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Changed to space-between */
     padding: 20px 32px;
 }
-.navbar-left {
+
+.navbar-left { /* New rule for left-aligned logo */
     display: flex;
     align-items: center;
-    gap: 24px;
 }
-.navbar-left .logo {
+
+.navbar-left .logo { /* Styling for the logo in navbar-left */
     height: 60px;
     margin-bottom: 8px;
     border-radius: 50%;
+    animation: rotate 4s linear infinite; /* Animation remains */
 }
-.navbar-left ul {
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 24px; /* Espacio entre los elementos de navegación y el logo */
+}
+
+.navbar-right ul {
     display: flex;
     list-style: none;
     gap: 28px;
     margin: 0;
     padding: 0;
 }
-.navbar-left a,
+
+.navbar-right a,
 .contactanos-link {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
     font-size: 16px;
 }
-.navbar-left a:hover,
+
+.navbar-right a:hover,
 .contactanos-link:hover {
     color: #ffd700;
     border-bottom: 2px solid #ffd700;
 }
-.navbar-right {
-    display: flex;
-    align-items: center;
+
+/* Animación de rotación del logo */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
+
 /* Waves */
 .custom-wave {
     position: relative;
